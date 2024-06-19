@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Archivo Black";
+    margin: 0;
+    --red: rgb(158, 7, 7);
+    --yellow: rgb(241, 179, 7);
+}
+
+header {
+    background-color: red;
+    text-align: center;
+    font-family: "Alfa Slab One";
+}
+
+aside {
+    background-color: yellow;
+    flex-basis: 25%;
+}
+
+aside > p {
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: blue;
+    flex-basis: 75%;
+}
+
+h1 {
+    margin: 0;
+    padding: 0.75em;
+    font-size: 64px;
+}
+
+h2 {
+    margin: 0;
+    font-family: "Alfa Slab One";
+    font-size: 42px;
+    padding: 1em;
+}
+
+p {
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 2px solid black;
+}
+
+#content-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#gallery-container {
+    background-color: white;
+}
+
+.gallery-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.gallery-item {
+    background-color: pink;
+    padding: 0px;
+}
+
+.gallery-item img {
+    width: 300px;
+    height: 300px;
+}
