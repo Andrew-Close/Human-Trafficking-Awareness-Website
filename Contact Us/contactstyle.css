@@ -4,21 +4,28 @@
     box-sizing: border-box;
 }
 
+html, body {
+    touch-action: none;
+}
+
 body {
     margin: 0;
     background-image: url("person_laptop.jpg");
     background-size: cover;
     background-attachment: fixed;
-    background-position-x: -40vw;
-    background-position-y: -15vh;
-    overflow: hidden;
+    overflow: visible;
     --red: rgb(158, 7, 7);
     --yellow: rgb(241, 179, 7);
 }
 
+body {
+    background-position-x: -240vw;
+    background-position-y: -20vh;
+}
+
 .flex-container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
 }
 
 .circle {
@@ -26,19 +33,19 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: -50vh;
-    bottom: -25vh;
-    border: 75vh solid var(--yellow);
+    right: -25vw;
+    bottom: -75vw;
+    border: 75vw solid var(--yellow);
     border-radius: 100%;
     margin: 0;
     height: 0;
     width: 0;
-    font-size: 6vh;
+    font-size: 9vw;
 }
 
 .circle > ul {
     position: relative;
-    right: 200px;
+    bottom: 150px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -55,7 +62,7 @@ body {
 }
 
 .circle-container {
-    flex-basis: 100vh;
+    flex-basis: 100vw;
     flex-grow: 0;
     height: 100vh;
 }
@@ -66,9 +73,74 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
     color: var(--red);
-    font-size: 5vh;
+    font-size: 9vw;
+    padding: 0.2em;
     font-family: "Alfa Slab One";
     font-weight: lighter;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-position-x: -40vw;
+        background-position-y: -15vh;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: -50vh;
+        bottom: -25vh;
+        border: 75vh solid var(--yellow);
+        border-radius: 100%;
+        margin: 0;
+        height: 0;
+        width: 0;
+        font-size: 6vh;
+    }
+    
+    .circle > ul {
+        position: relative;
+        top: 0;
+        right: 200px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .circle > ul > li > p {
+        margin: 0.15em;
+        font-family: "Archivo Black";
+    }
+    
+    .circle > ul > li > p > a {
+        text-decoration: none;
+        color: var(--red);
+    }
+    
+    .circle-container {
+        flex-basis: 100vh;
+        flex-grow: 0;
+        height: 100vh;
+    }
+    
+    .title {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        color: var(--red);
+        font-size: 5vh;
+        font-family: "Alfa Slab One";
+        font-weight: lighter;
+    }
 }

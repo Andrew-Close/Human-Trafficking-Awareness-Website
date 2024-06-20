@@ -13,6 +13,7 @@ body {
     --yellow: rgb(241, 225, 7);
     --plain: #fffef8;
     background-color: var(--plain);
+    overflow: hidden;
 }
 
 header {
