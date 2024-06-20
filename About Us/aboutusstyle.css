@@ -8,6 +8,8 @@ body {
     font-family: "Archivo Black";
     margin: 0;
     --red: rgb(158, 7, 7);
+    --light-red: #ffecec;
+    --dark-red: rgb(88, 4, 4);
     --yellow: rgb(241, 225, 7);
     --plain: #fffef8;
     background-color: var(--plain);
@@ -19,8 +21,6 @@ header {
     align-items: center;
     text-align: center;
     font-family: "Alfa Slab One";
-    border-bottom: 8px solid var(--yellow);
-    background-color: transparent;
 }
 
 #header-image {
@@ -34,6 +34,8 @@ header {
 
 aside {
     flex-basis: 33%;
+    border-right: 4px solid var(--dark-red);
+    background-color: var(--light-red);
 }
 
 aside > p {
@@ -45,6 +47,10 @@ main {
     flex-flow: column nowrap;
     align-items: center;
     flex-basis: 67%;
+}
+
+aside, main {
+    padding-top: 48px;
 }
 
 h1 {
@@ -69,7 +75,7 @@ p {
 }
 
 #gallery-container {
-    margin-top: 0.6em;
+    margin: 0.6em 1em 1em 1em;
     border: 4px solid var(--red);
     border-radius: 20px;
 }
@@ -85,6 +91,7 @@ p {
     text-decoration-color: var(--yellow);
     text-decoration-thickness: 0.2em;
     text-underline-offset: 0.2em;
+    font-size: 20px;
 }
 
 #gallery-container td {
@@ -96,7 +103,6 @@ p {
     border-top: 8px solid var(--red);
     display: flex;
     flex-flow: row nowrap;
-    padding-top: 48px;
     background-color: var(--plain);
 }
 
@@ -110,8 +116,9 @@ p {
 }
 
 .gallery-item img {
-    width: 300px;
-    height: 300px;
+    display: block;
+    width: 400px;
+    height: 400px;
     margin: 0;
     padding: 0;
 }
