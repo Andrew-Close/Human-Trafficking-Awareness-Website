@@ -12,8 +12,8 @@ body {
     --dark-red: rgb(88, 4, 4);
     --yellow: rgb(241, 225, 7);
     --plain: #fffef8;
+    --black: #252525;
     background-color: var(--plain);
-    overflow: hidden;
 }
 
 header {
@@ -30,17 +30,24 @@ header {
     height: 300px;
     background-image: url(office_meeting.jpg);
     z-index: -1;
-    filter: blur(3px);
+    filter: blur(15px);
 }
 
 aside {
     flex-basis: 33%;
-    border-right: 4px solid var(--dark-red);
     background-color: var(--light-red);
 }
 
 aside > p {
-    font-size: 24px;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    padding: 0.9em 0.9em 2.4em 0.9em;
+    color: var(--black);
+}
+
+aside > h2 {
+    text-align: center;
 }
 
 main {
@@ -51,14 +58,14 @@ main {
 }
 
 aside, main {
-    padding-top: 48px;
+    padding-top: 24px;
 }
 
 h1 {
     width: 100%;
     margin: 0.75em 0;
     padding: 0.2em;
-    font-size: 64px;
+    font-size: 48px;
     background-color: var(--plain);
     color: var(--red)
 }
@@ -66,13 +73,8 @@ h1 {
 h2 {
     margin: 0;
     font-family: "Alfa Slab One";
-    font-size: 42px;
+    font-size: 32px;
     color: var(--red);
-}
-
-p {
-    margin: 0;
-    padding: 0 2em;
 }
 
 #gallery-container {
@@ -92,7 +94,7 @@ p {
     text-decoration-color: var(--yellow);
     text-decoration-thickness: 0.2em;
     text-underline-offset: 0.2em;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #gallery-container td {
@@ -103,13 +105,13 @@ p {
 #content-container {
     border-top: 8px solid var(--red);
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column-reverse nowrap;
     background-color: var(--plain);
 }
 
 .gallery-row {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
 }
 
 .gallery-item {
@@ -118,8 +120,120 @@ p {
 
 .gallery-item img {
     display: block;
-    width: 400px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
     margin: 0;
     padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: "Alfa Slab One";
+    }
+    
+    #header-image {
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        background-image: url(office_meeting.jpg);
+        z-index: -1;
+        filter: blur(15px);
+    }
+    
+    aside {
+        flex-basis: 33%;
+        border-right: 4px solid var(--dark-red);
+        background-color: var(--light-red);
+    }
+    
+    aside > p {
+        font-size: 24px;
+        text-align: left;
+        margin: 0;
+        padding: 0 2em;
+    }
+
+    aside > h2 {
+        display: none;
+    }
+    
+    main {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        flex-basis: 67%;
+    }
+    
+    aside, main {
+        padding-top: 48px;
+    }
+    
+    h1 {
+        width: 100%;
+        margin: 0.75em 0;
+        padding: 0.2em;
+        font-size: 64px;
+        background-color: var(--plain);
+        color: var(--red)
+    }
+    
+    h2 {
+        margin: 0;
+        font-family: "Alfa Slab One";
+        font-size: 42px;
+        color: var(--red);
+    }
+    
+    #gallery-container {
+        margin: 0.6em 1em 1em 1em;
+        border: 4px solid var(--red);
+        border-radius: 20px;
+    }
+    
+    #gallery-container table {
+        border-collapse: collapse;
+    }
+    
+    #gallery-container tr:nth-child(2) td {
+        text-align: center;
+        padding: 0.35em;
+        text-decoration: underline;
+        text-decoration-color: var(--yellow);
+        text-decoration-thickness: 0.2em;
+        text-underline-offset: 0.2em;
+        font-size: 20px;
+    }
+    
+    #gallery-container td {
+        border: 3px solid black;
+        padding: 0;
+    }
+    
+    #content-container {
+        border-top: 8px solid var(--red);
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: var(--plain);
+    }
+    
+    .gallery-row {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    
+    .gallery-item {
+        padding: 10px;
+    }
+    
+    .gallery-item img {
+        display: block;
+        width: 400px;
+        height: 400px;
+        margin: 0;
+        padding: 0;
+    }
 }
