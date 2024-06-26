@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    --red: rgb(158, 7, 7);
+    --yellow: rgb(241, 179, 7);
+    --plain: #fffef8;
+    --black: #252525;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#header-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--plain);
+    width: 80vh;
+    height: 80vh;
+    border-radius: 100%;
+}
+
+#header-image {
+    position: absolute;
+    background-image: url(person_laptop.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 120vh;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+h1 {
+    margin: 0;
+    font-size: 60px;
+    font-family: "Alfa Slab One";
+}
+
+#header-container small {
+    font-size: 24px;
+    font-family: "Archivo Black";
+}
+
+main {
+    background-color: var(--plain);
+}
