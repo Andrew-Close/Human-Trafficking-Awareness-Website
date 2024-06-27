@@ -7,8 +7,8 @@
 body {
     margin: 0;
     background-color: black;
-    --red: rgb(158, 7, 7);
-    --yellow: rgb(241, 179, 7);
+    --red: rgb(196, 8, 8);
+    --yellow: rgb(241, 225, 7);
     --plain: #fffef8;
     --black: #252525;
 }
@@ -46,13 +46,34 @@ h1 {
     margin: 0;
     font-size: 60px;
     font-family: "Alfa Slab One";
+    text-decoration: underline;
+    text-decoration-color: var(--red);
 }
 
 #header-container small {
     font-size: 24px;
     font-family: "Archivo Black";
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+}
+
+h1, #header-container small {
+    text-decoration-thickness: 0.13em;
+    text-underline-offset: 0.15em;
 }
 
 main {
     background-color: var(--plain);
+}
+
+p {
+    font-size: 24px;
+    font-family: "Archivo Black";
+    margin: 0 8em;
+    padding: 2em 0;
+    border-bottom: 5px solid var(--red);
+}
+
+.paragraph {
+
 }
