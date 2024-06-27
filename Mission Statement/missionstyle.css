@@ -70,10 +70,10 @@ p {
     font-size: 24px;
     font-family: "Archivo Black";
     margin: 0 8em;
-    padding: 2em 0;
-    border-bottom: 5px solid var(--red);
+    padding: 2.75em 0;
+    text-align: center;
 }
 
-.paragraph {
-
+main p:not(:last-child) {
+    border-bottom: 5px solid var(--red);
 }
