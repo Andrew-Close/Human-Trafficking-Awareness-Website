@@ -7,6 +7,7 @@
 body {
     margin: 0;
     background-color: black;
+    color: var(--black);
     --red: rgb(196, 8, 8);
     --yellow: rgb(241, 225, 7);
     --plain: #fffef8;

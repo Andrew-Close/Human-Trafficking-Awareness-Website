@@ -14,6 +14,7 @@ body {
     --plain: #fffef8;
     --black: #252525;
     background-color: var(--plain);
+    color: var(--black);
 }
 
 header {
@@ -43,7 +44,6 @@ aside > p {
     text-align: center;
     margin: 0;
     padding: 0.9em 0.9em 2.4em 0.9em;
-    color: var(--black);
 }
 
 aside > h2 {
@@ -146,7 +146,6 @@ h2 {
     
     aside {
         flex-basis: 33%;
-        border-right: 4px solid var(--dark-red);
         background-color: var(--light-red);
     }
     
