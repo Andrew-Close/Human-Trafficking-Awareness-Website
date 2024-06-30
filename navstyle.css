@@ -1,0 +1,36 @@
+body {
+    --plain: #fffef8;
+    --black: #252525;
+    --lighter-yellow: #fff9d6;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: var(--lighter-yellow);
+}
+
+#nav-content {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-left: 16px;
+}
+
+.nav-item {
+    font-size: 22px;
+    padding: 1em;
+    color: var(--black);
+}
+
+@media only screen and (min-width: 768px) {
+    #nav-content {
+        flex-flow: row wrap;
+        padding-left: 30px;
+    }
+    .nav-item {
+        font-size: 24px;
+        padding: 1.5em;
+    }
+}

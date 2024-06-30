@@ -8,14 +8,22 @@ body {
     font-family: "Archivo Black";
     margin: 0;
     --red: rgb(158, 7, 7);
-    --light-red: #ffecec;
+    --light-red: rgb(243, 113, 113);
+    --lighter-red: #ffecec;
     --dark-red: rgb(88, 4, 4);
     --yellow: rgb(241, 225, 7);
+    --lighter-yellow: #fff8ce;
     --plain: #fffef8;
     --black: #252525;
     background-color: var(--plain);
     color: var(--black);
 }
+
+#nav-controller {
+    padding: 1.2em 1.2em 1.2em 1em;
+    font-size: 20px;
+    width: 1px;
+} 
 
 header {
     display: flex;
@@ -23,6 +31,8 @@ header {
     align-items: center;
     text-align: center;
     font-family: "Alfa Slab One";
+    border-top: 8px solid var(--red);
+    border-bottom: 8px solid var(--red);
 }
 
 #header-image {
@@ -36,7 +46,7 @@ header {
 
 aside {
     flex-basis: 33%;
-    background-color: var(--light-red);
+    background-color: var(--lighter-red);
 }
 
 aside > p {
@@ -63,7 +73,7 @@ aside, main {
 
 h1 {
     width: 100%;
-    margin: 0.75em 0;
+    margin: 1em 0;
     padding: 0.2em;
     font-size: 48px;
     background-color: var(--plain);
@@ -91,7 +101,7 @@ h2 {
     text-align: center;
     padding: 0.35em;
     text-decoration: underline;
-    text-decoration-color: var(--yellow);
+    text-decoration-color: var(--light-red);
     text-decoration-thickness: 0.2em;
     text-underline-offset: 0.2em;
     font-size: 16px;
@@ -103,7 +113,6 @@ h2 {
 }
 
 #content-container {
-    border-top: 8px solid var(--red);
     display: flex;
     flex-flow: column-reverse nowrap;
     background-color: var(--plain);
@@ -127,12 +136,18 @@ h2 {
 }
 
 @media only screen and (min-width: 768px) {
+    #nav-controller-container {
+        display: none;
+    }
+
     header {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         font-family: "Alfa Slab One";
+        border-top: 8px solid var(--red);
+        border-bottom: 8px solid var(--red);
     }
     
     #header-image {
@@ -146,7 +161,7 @@ h2 {
     
     aside {
         flex-basis: 33%;
-        background-color: var(--light-red);
+        background-color: var(--lighter-red);
     }
     
     aside > p {
@@ -173,7 +188,7 @@ h2 {
     
     h1 {
         width: 100%;
-        margin: 0.75em 0;
+        margin: 1em 0;
         padding: 0.2em;
         font-size: 64px;
         background-color: var(--plain);
@@ -201,7 +216,7 @@ h2 {
         text-align: center;
         padding: 0.35em;
         text-decoration: underline;
-        text-decoration-color: var(--yellow);
+        text-decoration-color: var(--light-red);
         text-decoration-thickness: 0.2em;
         text-underline-offset: 0.2em;
         font-size: 20px;
@@ -213,7 +228,6 @@ h2 {
     }
     
     #content-container {
-        border-top: 8px solid var(--red);
         display: flex;
         flex-flow: row nowrap;
         background-color: var(--plain);
