@@ -18,11 +18,28 @@ body {
     --yellow: rgb(241, 179, 7);
     --plain: #fffef8;
     --black: #252525;
+    font-family: "Archivo Black";
 }
 
 body {
     background-position-x: -240vw;
     background-position-y: -20vh;
+}
+
+nav {
+    width: 100vw;
+    border-bottom: 8px solid var(--red);
+    z-index: 1;
+}
+
+#nav-controller {
+    padding: 1.2em 1.2em 1.2em 1em;
+    font-size: 20px;
+    width: 1px;
+}
+
+#nav-content {
+    display: none;
 }
 
 .flex-container {
@@ -86,6 +103,18 @@ body {
     body {
         background-position-x: -40vw;
         background-position-y: -15vh;
+    }
+
+    nav {
+        position: absolute;
+    }
+
+    #nav-controller {
+        display: none;
+    }
+
+    #nav-content {
+        display: block;
     }
     
     .flex-container {

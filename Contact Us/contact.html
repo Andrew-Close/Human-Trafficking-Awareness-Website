@@ -5,9 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="contactstyle.css">
+    <link rel="stylesheet" href="/Human Trafficking Awareness/navstyle.css">
     <title>Contact us</title>
 </head>
 <body>
+    <nav>
+        <div id="nav-controller-container">
+            <div id="nav-controller">X</div>
+        </div>
+        <div id="nav-content">
+            <a href="">
+                <div class="nav-item">Home</div>
+            </a>
+            <a href="/Human Trafficking Awareness/Mission Statement/mission.html">
+                <div class="nav-item">Mission Statement</div>
+            </a>
+            <a href="/Human Trafficking Awareness/Contact Us/contact.html">
+                <div class="nav-item">Contact Us</div>
+            </a>
+            <a href="/Human Trafficking Awareness/About Us/aboutus.html">
+                <div class="nav-item">About Us</div>
+            </a>
+            <a href="">
+                <div class="nav-item">Placeholder</div>
+            </a>
+            <a href="">
+                <div class="nav-item">Placeholder</div>
+            </a>
+        </div>
+    </nav>
     <div class="flex-container">
         <div class="title">
             <h1>Contact us</h1>
@@ -31,5 +57,16 @@
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById("nav-controller").addEventListener("click", toggleMenu);
+
+        function toggleMenu() {
+            if (document.getElementById("nav-content").style.display == "none") {
+                document.getElementById("nav-content").style.display = "block";
+            } else {
+                document.getElementById("nav-content").style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
