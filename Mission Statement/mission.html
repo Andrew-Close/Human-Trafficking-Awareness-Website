@@ -11,9 +11,7 @@
 <body>
     <nav>
         <div id="nav-controller-container">
-            <a href="">
-                <div id="nav-controller">X</div>
-            </a>
+            <div id="nav-controller">X</div>
         </div>
         <div id="nav-content">
             <a href="">
@@ -48,5 +46,24 @@
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus porro cupiditate, nulla cumque accusamus eaque ducimus, perspiciatis obcaecati maxime vel minima. Possimus quae iste maxime dolor eligendi, voluptatem temporibus vel?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem saepe, odit vero, illum doloremque blanditiis reiciendis ut laboriosam doloribus reprehenderit voluptatem, illo adipisci voluptatibus optio delectus quos veritatis fugiat accusamus.</p>
     </main>
+    <script>
+        document.getElementById("nav-controller").addEventListener("click", toggleMenu);
+
+        function toggleMenu() {
+            if (document.getElementById("nav-content").style.display == "none") {
+                document.getElementById("nav-content").style.display = "block";
+            } else {
+                document.getElementById("nav-content").style.display = "none";
+            }
+        }
+
+        function disableMenu() {
+            if (document.body.clientWidth < 768) {
+                document.getElementById("nav-content").style.display = "none";
+            }
+        }
+
+        window.onload = disableMenu;
+    </script>
 </body>
 </html>

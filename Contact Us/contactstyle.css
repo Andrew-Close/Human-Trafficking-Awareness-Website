@@ -93,6 +93,7 @@ nav {
 
 .title {
     display: flex;
+    position: relative;
     flex-grow: 1;
     justify-content: center;
     align-items: center;
@@ -102,6 +103,7 @@ nav {
     padding: 0.2em;
     font-family: "Alfa Slab One";
     font-weight: lighter;
+    top: 44px;
 }
 
 @media only screen and (min-width: 768px) {

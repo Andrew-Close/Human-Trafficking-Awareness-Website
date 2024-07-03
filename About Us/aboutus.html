@@ -11,10 +11,8 @@
 <body>
     <nav>
         <div id="nav-controller-container">
-            <a href="">
-                <div id="nav-controller">X</div>
-            </a>
-        </div>
+            <div id="nav-controller">X</div>
+    </div>
         <div id="nav-content">
             <a href="">
                 <div class="nav-item">Home</div>
@@ -117,5 +115,24 @@
             </div>
         </main>
     </div>
+    <script>
+        document.getElementById("nav-controller").addEventListener("click", toggleMenu);
+
+        function toggleMenu() {
+            if (document.getElementById("nav-content").style.display == "none") {
+                document.getElementById("nav-content").style.display = "block";
+            } else {
+                document.getElementById("nav-content").style.display = "none";
+            }
+        }
+
+        function disableMenu() {
+            if (document.body.clientWidth < 768) {
+                document.getElementById("nav-content").style.display = "none";
+            }
+        }
+
+        window.onload = disableMenu;
+    </script>
 </body>
 </html>
