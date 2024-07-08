@@ -23,7 +23,7 @@ body {
 
 body {
     background-position-x: -240vw;
-    background-position-y: -20vh;
+    background-position-y: -40vh;
 }
 
 nav {
@@ -108,8 +108,8 @@ nav {
 
 @media only screen and (min-width: 768px) {
     body {
-        background-position-x: -40vw;
-        background-position-y: -15vh;
+        background-position-x: -220vw;
+        background-position-y: 0px;
     }
 
     nav {
